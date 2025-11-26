@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    /* === Language & Module Settings === */
+    "target": "ES2024",                        // Use latest ECMAScript features supported by Node 20+
+    "module": "ESNext",                        // Native ES Modules (import/export)
+    "moduleResolution": "node",                // Resolve modules like Node.js
+    "types": ["node"],                         // Include Node.js global types (process, fs, etc.)
+    "resolveJsonModule": true,                 // Allow importing JSON files
+    "esModuleInterop": true,                   // Allows clean `import express from 'express'`
+    "allowSyntheticDefaultImports": true,      // Default imports from CJS modules
+
+    /* === Directories === */
+    "rootDir": "./src",                        // Source folder
+    "outDir": "./dist",                        // Compiled JS output folder
+
+    /* === Import Aliases (optional, clean imports) === */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+
+    /* === Type Safety & Build Optimization === */
+    "strict": true,                            // Enable all strict type checks
+    "isolatedModules": true,                   // Ensure each file can compile independently (ESM)
+    "skipLibCheck": true,                      // Skip checking node_modules types
+    "forceConsistentCasingInFileNames": true   // Prevent case-sensitive import issues
+  },
+
+  /* === Files to Include === */
+  "include": ["src"],
+
+  /* === Files/Folders to Exclude === */
+  "exclude": ["node_modules", "dist"]
+}
